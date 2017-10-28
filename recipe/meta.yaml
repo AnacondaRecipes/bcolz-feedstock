@@ -16,18 +16,20 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
-    - toolchain
+  host:
     - python
-    - setuptools
-    - setuptools_scm
-    - cython
-    - numpy x.x
+    - setuptools >18.0
+    - setuptools_scm >1.5.4
+    - cython >=0.22
+    - numpy
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   run:
     - python
-    - numpy x.x
-    - numexpr
-    - dask
+    - {{ pin_compatible('numpy') }}
+    - numexpr >=2.5.2
+    - dask >=0.9.0
     - pandas
     - pytables
 

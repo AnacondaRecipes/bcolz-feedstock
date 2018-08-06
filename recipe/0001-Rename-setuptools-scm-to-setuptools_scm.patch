@@ -1,0 +1,11 @@
+--- work/setup.py.orig	2018-08-06 14:32:22.075987700 -0500
++++ work/setup.py	2018-08-06 14:32:37.290483600 -0500
+@@ -217,7 +217,7 @@
+         'cython>=0.22',
+         'numpy>=1.7',
+         'setuptools>18.0',
+-        'setuptools-scm>1.5.4'
++        'setuptools_scm>1.5.4'
+     ],
+     tests_require=tests_require,
+     extras_require=dict(
